@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "datum-mcp",
+  "main": "src/index.ts",
+  "account_id": "c9bf3d8e875ffe933a9bf895695e0fd1",
+  "compatibility_date": "2025-03-10",
+  "compatibility_flags": ["nodejs_compat"],
+  "migrations": [{ "new_sqlite_classes": ["DatumMCP"], "tag": "v1" }],
+  "durable_objects": { "bindings": [{ "class_name": "DatumMCP", "name": "MCP_OBJECT" }] },
+  "kv_namespaces": [{ "binding": "OAUTH_KV", "id": "4f21b80bc14d41d29efb9f9b969d214f" }],
+  "vars": { "DATUM_API_URL": "https://datum-api-datumlabs1.vercel.app", "GITHUB_ORG": "DatumLabMHQ" },
+  "observability": { "enabled": true }
+}

@@ -1,5 +1,7 @@
 # datum-mcp
 
+> Part of [Atlas](https://github.com/DatumLabMHQ/atlas), Datum Labs' internal data infrastructure. Start there for how the parts fit together.
+
 The people's door to the Datum data platform: an MCP server on Cloudflare Workers (Datum Labs account) that
 signs users in with GitHub and only admits members of the DatumLabMHQ organisation. Tools: `whoami`,
 `list_products`, `list_questions`, `ask`, `query`, `health`; each one forwards to `datum-api` with a server-side

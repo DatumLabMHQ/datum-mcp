@@ -3,7 +3,7 @@
 // Runtime types generated with workerd@1.20260907.1 2025-03-10 nodejs_compat
 interface __BaseEnv_Env {
 	OAUTH_KV: KVNamespace;
-	DATUM_API_URL: "https://datum-api-datumlabs1.vercel.app";
+	DATUM_API_URL: "https://datum-api.datumlabs.workers.dev";
 	GITHUB_ORG: "DatumLabMHQ";
 	MCP_OBJECT: DurableObjectNamespace<import("./src/index").DatumMCP>;
 }

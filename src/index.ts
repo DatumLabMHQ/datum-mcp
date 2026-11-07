@@ -9,7 +9,7 @@ import type { Props } from "./utils";
 // the same five tools as the keyed API: this worker forwards each call to datum-api with a server-side
 // key, so nobody holds a key on their machine.
 async function api<T>(env: Env, path: string): Promise<T> {
-	const base = (env.DATUM_API_URL || "https://datum-api-datumlabs1.vercel.app").replace(/\/$/, "");
+	const base = (env.DATUM_API_URL || "https://datum-api.datumlabs.workers.dev").replace(/\/$/, "");
 	const res = await fetch(`${base}${path}`, { headers: { "x-api-key": env.DATUM_API_KEY, accept: "application/json" } });
 	if (!res.ok) throw new Error(`datum-api ${path} -> HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
 	return res.json() as Promise<T>;
